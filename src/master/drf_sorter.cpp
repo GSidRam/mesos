@@ -47,6 +47,8 @@ void DRFSorter::add(const string& name, double weight)
   Client client(name, 0, 0);
   clients.insert(client);
 
+  resetAllocations();
+ 
   allocations[name] = Resources();
   weights[name] = weight;
 }
